@@ -5,7 +5,10 @@ import "./menu.scss";
 import items from "./items";
 
 const getClassName = ({ isActive }) => {
-  const className = isActive ? `${styles.link} ${styles.active}` : styles.link;
+  const className = "menu__item";
+  if (isActive) {
+    return `${className} menu__item--active`;
+  }
   return className;
 };
 
@@ -19,8 +22,8 @@ const Menu = () => {
   ));
 
   return (
-    <div className={wrapper}>
-      <ul className={menu}>{elements}</ul>
+    <div className="wrapper">
+      <ul className="menu">{elements}</ul>
     </div>
   );
 };
