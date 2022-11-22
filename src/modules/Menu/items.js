@@ -4,17 +4,27 @@ const items = [
     {
         id: nanoid(),
         to: "/",
-        text: "Home"
+        text: "Каталог",
     },
     {
         id: nanoid(),
-        to: "/posts",
-        text: "Posts search"
+        to: "/works",
+        text: "Роботи клієнтів"
+    },
+    {
+        id: nanoid(),
+        to: "/shippings",
+        text: "Оплата та доставка"
     },
     {
         id: nanoid(),
         to: "/contacts",
-        text: "Contacts"
+        text: "Контакти"
+    },
+    {
+        id: nanoid(),
+        to: "/cart",
+        text: "Кошик"
     },
 ];
 
