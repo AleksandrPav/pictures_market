@@ -1,15 +1,13 @@
-import { NavLink } from "react-router-dom";
-
 import "./categories.scss";
 
 import items from "./items";
 
-const Categories = () => {
-  const elements = items.map(({ id, name }) => (
+const Categories = ({ handleCategories }) => {
+  const elements = items.map(({ id, name, slug }) => (
     <li key={id} className="nav-item">
-      <NavLink className="category-link" to={name}>
-        {name}
-      </NavLink>
+      <button className="nav-link" onClick={() => handleCategories(id)}>
+        <span className="link-text">{name}</span>
+      </button>
     </li>
   ));
 
@@ -21,3 +19,6 @@ const Categories = () => {
 };
 
 export default Categories;
+//  <NavLink className="category-link" to={slug}>
+//    {name}
+//  </NavLink>;
