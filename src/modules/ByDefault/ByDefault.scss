@@ -1,1 +1,10 @@
 @import "./node_modules/bootstrap/scss/bootstrap";
+
+
+.openImage{
+   transition: opacity 0.2s ease-in-out;
+    &:hover{
+        cursor: pointer;
+        opacity: 0.5;
+    }
+}

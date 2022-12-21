@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Categories from "../../modules/Categories/Categories";
 import Products from "../../modules/Products/Products";
 import ByDefault from "../../modules/ByDefault/ByDefault";
+import ProductModal from "../../modules/ProductModal/ProductModal";
 
 import getProduction from "../../services/API";
 
@@ -11,9 +12,24 @@ import "./homePage.scss";
 const HomePage = () => {
   const [categories, setCategories] = useState("");
   const [parentCategories, setParentCategories] = useState([]);
+  const [activeModal, setActiveModal] = useState(false);
+
+  console.log(activeModal);
 
   function handleCategories(id) {
     setCategories(id);
+  }
+
+  function onActiveModal() {
+    setActiveModal(true);
+  }
+
+  function onCloseModal() {
+    setActiveModal(false);
+  }
+
+  function modalImageId(id) {
+    console.log(id);
   }
 
   const getCurentCategories = parentCategories.filter((item) => {
@@ -33,11 +49,28 @@ const HomePage = () => {
   }, [categories]);
 
   // console.log(parentCategories);
+
+  if (activeModal) {
+    return (
+      <>
+        <Categories handleCategories={handleCategories} />
+        <ProductModal
+          onCloseModal={onCloseModal}
+          product={getCurentCategories}
+        />
+      </>
+    );
+  }
+
   if (categories === "") {
     return (
       <div className="container">
         <Categories handleCategories={handleCategories} />
-        <ByDefault parentCategories={parentCategories} />
+        <ByDefault
+          parentCategories={parentCategories}
+          activeModal={onActiveModal}
+          modalImageId={modalImageId}
+        />
       </div>
     );
   }

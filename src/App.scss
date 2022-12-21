@@ -1,11 +1,15 @@
 @import "./node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap');
 
-body {
-  background-image: url("./img/background/pexels-karolina-grabowska-7282678.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  font-family: 'Noto Sans Georgian', sans-serif;
+// body {
+//   background-image: url("./img/background/pexels-karolina-grabowska-7282678.jpg");
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-attachment: fixed;
+//   background-position: center;
+//   font-family: 'Noto Sans Georgian', sans-serif;
+// }
+
+body{
+  background: linear-gradient(to right, #8e9eab, #eef2f3);
 }

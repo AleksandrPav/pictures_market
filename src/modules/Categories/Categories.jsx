@@ -4,16 +4,19 @@ import items from "./items";
 
 const Categories = ({ handleCategories }) => {
   const elements = items.map(({ id, name, slug }) => (
-    <li key={id} className="nav-item">
-      <button className="nav-link" onClick={() => handleCategories(id)}>
-        <span className="link-text">{name}</span>
+    <li key={id} className="item nav-item">
+      <button
+        className="item-button nav-link"
+        onClick={() => handleCategories(id)}
+      >
+        <span className="link-text span-color">{name}</span>
       </button>
     </li>
   ));
 
   return (
     <div className="container wrapper">
-      <ul className="nav justify-content-center ">{elements}</ul>
+      <ul className="nav-items nav justify-content-center ">{elements}</ul>
     </div>
   );
 };

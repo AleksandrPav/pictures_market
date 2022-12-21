@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import "./menu.scss";
 
@@ -14,9 +14,20 @@ const Menu = () => {
   ));
 
   return (
-    <nav className="nav justify-content-center wrapper">
-      <ul className="nav justify-content-center">{elements}</ul>
-    </nav>
+    <div className="container-fluid justify-content-between ">
+      <Link className="navbar-brand" to={"/"}>
+        <img
+          src="../img/logo/logo-removebg-preview.png"
+          alt="logo"
+          className="logo"
+          width="30"
+          height="24"
+        />
+      </Link>
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="nav justify-content-center">{elements}</ul>
+      </div>
+    </div>
   );
 };
 
