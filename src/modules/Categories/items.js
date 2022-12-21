@@ -61,19 +61,9 @@ const items = [
         slug: 'space',
     },
     {
-        id: 35468,
-        name: "Чоловічі",
-        slug: 'cholovichi',
-    },
-    {
         id: 35559,
         name: "Репродукції художників",
         slug: 'reproductions-of-artists',
-    },
-    {
-        id: 35660,
-        name: "Авторські колекції",
-        slug: 'author-collections',
     },
     {
         id: 37305,
@@ -99,11 +89,6 @@ const items = [
         id: 42415,
         name: "Східна тематика",
         slug: 'eastern-theme',
-    },
-    {
-        id: 42537,
-        name: "Для дітей ",
-        slug: 'for-children',
     },
     {
         id: 43319,

@@ -13,7 +13,7 @@ const Categories = ({ handleCategories }) => {
 
   return (
     <div className="container wrapper">
-      <ul className="nav flex-column">{elements}</ul>
+      <ul className="nav justify-content-center ">{elements}</ul>
     </div>
   );
 };

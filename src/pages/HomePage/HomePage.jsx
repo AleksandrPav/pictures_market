@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import Categories from "../../modules/Categories/Categories";
 import Products from "../../modules/Products/Products";
+import ByDefault from "../../modules/ByDefault/ByDefault";
 
 import getProduction from "../../services/API";
 
@@ -32,6 +33,14 @@ const HomePage = () => {
   }, [categories]);
 
   // console.log(parentCategories);
+  if (categories === "") {
+    return (
+      <div className="container">
+        <Categories handleCategories={handleCategories} />
+        <ByDefault parentCategories={parentCategories} />
+      </div>
+    );
+  }
 
   return (
     <div className="container">
