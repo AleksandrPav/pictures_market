@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ClipLoader from "react-spinners/PacmanLoader";
 
 import Categories from "../../modules/Categories/Categories";
 import Products from "../../modules/Products/Products";
@@ -13,6 +14,7 @@ const HomePage = () => {
   const [categories, setCategories] = useState("");
   const [parentCategories, setParentCategories] = useState([]);
   const [search, setSearch] = useState("");
+  const [loading, setLoading] = useState(false);
 
   console.log(search);
 
@@ -35,10 +37,12 @@ const HomePage = () => {
   // console.log(getCurentCategories);
 
   useEffect(() => {
+    setLoading(true);
     try {
       getProduction().then((data) => {
         setParentCategories(data.data.products);
       });
+      setLoading(false);
     } catch (error) {
       console.log(error);
     }
@@ -52,6 +56,7 @@ const HomePage = () => {
         </nav>
         <div className="container">
           <Categories handleCategories={handleCategories} />
+          <ClipLoader color={"#123abc"} loading={loading} size={50} />
           <ByDefault
             parentCategories={parentCategories}
             modalImageId={modalImageId}
