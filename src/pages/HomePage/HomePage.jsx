@@ -51,10 +51,10 @@ const HomePage = () => {
   if (categories === "") {
     return (
       <>
-        <nav className="navbar navbar-expand-lg bg-light">
+        <nav className="navbar navbar-expand-lg strip icon_3">
           <Menu takeValueSearch={takeValueSearch} />
         </nav>
-        <div className="container">
+        <div className="container icon_1 icon_2">
           <Categories handleCategories={handleCategories} />
           <ClipLoader color={"#123abc"} loading={loading} size={50} />
           <ByDefault

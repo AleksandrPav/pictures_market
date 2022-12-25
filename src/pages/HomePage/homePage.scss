@@ -1,2 +1,77 @@
 @import "./node_modules/bootstrap/scss/bootstrap";
 
+
+.strip{
+    &::after{
+        content: "";
+        display: block;
+        width: 75%;
+        border: #051937 4px solid;
+        border-radius: 10px;
+        position: absolute;
+        top: 75px;
+        left:50%;
+        right:50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        
+    }
+}
+.icon_1{
+    &::after{
+        content: "";
+        position: fixed;
+        display: block;
+        width: 75%;        
+        background-image: url("../../images/icons/paint-brish.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 150px;
+        height: 150px;
+        top: 50%;
+        left:10%;
+        right:50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        
+    }
+}
+.icon_2 {
+    &::before {
+        content: "";
+        position: fixed;
+        display: block;
+        background-image: url("../../images/icons/makeup-brushes.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 150px;
+        height: 150px;
+        top: 75%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+
+    }
+}
+.icon_3 {
+    &::before {
+        content: "";
+        position: fixed;
+        display: block;
+        background-image: url("../../images/icons/art.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 150px;
+        height: 150px;
+        top: 25%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        z-index: -1;
+
+    }
+}
+

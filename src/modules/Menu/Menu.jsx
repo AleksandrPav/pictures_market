@@ -13,17 +13,12 @@ const Menu = ({ takeValueSearch }) => {
     </li>
   ));
 
-  const newLocal = "./img/logo/logo-removebg-preview.png";
   return (
     <div className="container-md">
-      <Link className="navbar-brand" to={"/"}>
-        <img
-          src={newLocal}
-          alt="logo"
-          className="logo"
-          width="30"
-          height="24"
-        />
+      <Link className="navbar-brand nav-bar_link" to={"/"}>
+        <span className="logo-link__text">Paintings</span>
+        <span className="logo-link__text">For</span>
+        <span className="logo-link__text">Painting</span>
       </Link>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="nav justify-content-center">{elements}</ul>

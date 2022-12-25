@@ -9,18 +9,59 @@
 }
 
 .link-text{
-  color: black;
+  color: #051937;
   font-size: 24px;
   transition: all 0.2s ease-in-out;
   &:hover{
-    color: #535353;
+    color: #ebce12;
   }
 }
 
 .active{
-  background-color: #B0A8B9;
-  border-radius: 10px;
+  color: #B0A8B9;
 }
 .nav-bar_margin{
   margin-left: 25px;
+}
+
+.nav-bar_link{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-image: url("../../images/logo.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 50px;
+      height: 50px;
+      left: -50px;
+      z-index: -1;
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      border: #051937 1px solid;
+      border-radius: 10px;
+      height: 50px;
+      right: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+
+    }
+  
+}
+
+.logo-link__text{
+  font-size: 20px;
+  color: #ebce12;
+  font-weight: 700;
+  
 }
