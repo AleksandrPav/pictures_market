@@ -4,14 +4,6 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.nav-items{
-  
-  
-}
-.item{
-
-
-}
 
 .item-button{
   border:  none;
@@ -21,12 +13,10 @@
   &:hover{
     transform: scale(1.1);
     border-radius: 10px;
-    background-color: #fdfdfd;
+    background-color: #bb4162;
    }
 }
 
 .span-color{
-  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  color: #602e61;
 }

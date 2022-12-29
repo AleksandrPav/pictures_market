@@ -18,7 +18,7 @@
 }
 
 .active{
-  color: #B0A8B9;
+  border: #051937 1px solid;
 }
 .nav-bar_margin{
   margin-left: 25px;
@@ -64,4 +64,12 @@
   color: #ebce12;
   font-weight: 700;
   
+}
+.hover{
+  transition: all 0.2s ease-in-out;
+  &:hover{
+    transform: rotate(35deg) scale(1.1);
+    fill: #1b4c96;
+
+  }
 }
