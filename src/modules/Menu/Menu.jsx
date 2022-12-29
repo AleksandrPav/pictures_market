@@ -5,9 +5,14 @@ import "./menu.scss";
 import items from "./items";
 
 const Menu = ({ takeValueSearch }) => {
+  const getClassName = ({ isActive }) => {
+    const className = isActive ? "nav-link active" : "nav-link";
+    return className;
+  };
+
   const elements = items.map(({ id, to, text }) => (
     <li key={id} className="nav-item ">
-      <NavLink className="nav-link active" aria-current={to} to={to}>
+      <NavLink className={getClassName} to={to}>
         <span className="link-text ">{text}</span>
       </NavLink>
     </li>
@@ -21,17 +26,12 @@ const Menu = ({ takeValueSearch }) => {
         <span className="logo-link__text">Painting</span>
       </Link>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="nav nav-pills nav-fill justify-content-center">
-          {elements}
-        </ul>
+        <ul className="nav nav-pills justify-content-center">{elements}</ul>
       </div>
       <form
         className="d-flex"
         role="search"
-        onSubmit={(e) => {
-          e.preventDefault();
-          takeValueSearch(e.target[0].value);
-        }}
+        onChange={(e) => takeValueSearch(e.target.value)}
       >
         <input
           className="form-control me-2"
@@ -39,9 +39,6 @@ const Menu = ({ takeValueSearch }) => {
           placeholder="Введіть назву картини"
           aria-label="Search"
         ></input>
-        <button className="btn btn-outline-success" type="submit">
-          Пошук
-        </button>
       </form>
       <Link className="navbar-brand nav-bar_margin" to={"/cart"}>
         <svg

@@ -4,10 +4,6 @@
   margin-top: 25px;
 }
 
-.bg-color{
-  background-color: #f8f9fa;
-}
-
 .link-text{
   color: #051937;
   font-size: 24px;
@@ -15,11 +11,17 @@
   &:hover{
     color: #ebce12;
   }
-}
+  @media screen and (max-width: 1200px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 992px) {
+    font-size: 14px;
+  }
+    
+  }
+    
 
-.active{
-  border: #051937 1px solid;
-}
+
 .nav-bar_margin{
   margin-left: 25px;
 }
@@ -56,15 +58,47 @@
       z-index: -1;
 
     }
-  
+
+    @media screen and (max-width: 1200px) {
+      &::before {
+        width: 30px;
+        height: 30px;
+        left: -30px;
+      }
+      &::after {
+        height: 30px;
+        right: -5px;
+      }
+    }
+    @media screen and (max-width: 992px) {
+      &::before {
+        width: 20px;
+        height: 20px;
+        left: -20px;
+      }
+      &::after {
+        height: 20px;
+        right: -3px;
+      
+    }
+      
+    }
 }
+
 
 .logo-link__text{
   font-size: 20px;
   color: #ebce12;
   font-weight: 700;
-  
+  @media screen and (max-width: 1200px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 992px) {
+    font-size: 12px;
+    
+  }
 }
+
 .hover{
   transition: all 0.2s ease-in-out;
   &:hover{

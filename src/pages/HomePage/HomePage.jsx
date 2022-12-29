@@ -69,8 +69,8 @@ const HomePage = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-light ">
-        <Menu />
+      <nav className="navbar navbar-expand-lg strip icon_3">
+        <Menu takeValueSearch={takeValueSearch} />
       </nav>
       <div className="container">
         <Categories handleCategories={handleCategories} />
