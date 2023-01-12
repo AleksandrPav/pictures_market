@@ -15,8 +15,8 @@ const HomePage = () => {
   const [parentCategories, setParentCategories] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(false);
-
-  console.log(search);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [imgesPerPage] = useState(6);
 
   function takeValueSearch(value) {
     setSearch(value);
@@ -30,23 +30,19 @@ const HomePage = () => {
     console.log(id);
   }
 
-  const getCurentCategories = parentCategories.filter((item) => {
-    return Number(item.parent) === categories;
-  });
+  console.log(parentCategories);
+
+  // const getCurentCategories = parentCategories.filter((item) => {
+  //   return Number(item.parent) === categories;
+  // });
 
   // console.log(getCurentCategories);
 
   useEffect(() => {
     setLoading(true);
-    try {
-      getProduction().then((data) => {
-        setParentCategories(data.data.products);
-      });
-      setLoading(false);
-    } catch (error) {
-      console.log(error);
-    }
-  }, []);
+    setParentCategories(getProduction([]));
+    setLoading(false);
+  }, [parentCategories]);
 
   if (categories === "") {
     return (

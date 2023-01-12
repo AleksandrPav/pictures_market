@@ -1,16 +1,18 @@
 import "./categories.scss";
+import { Link } from "react-router-dom";
 
 import items from "./items";
 
 const Categories = ({ handleCategories }) => {
   const elements = items.map(({ id, name, slug }) => (
     <li key={id} className="item nav-item">
-      <button
+      <Link
+        to={slug}
         className="item-button nav-link"
         onClick={() => handleCategories(id)}
       >
         <span className="link-text span-color">{name}</span>
-      </button>
+      </Link>
     </li>
   ));
 
